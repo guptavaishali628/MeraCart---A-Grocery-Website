@@ -10,7 +10,7 @@ const Values = () => {
   // for left values(we just wanted only two values to render in left side so we use "slice(0,2)" method "):
   const leftValues = value.slice(0,2).map(item=>{
     return(
-        <div className='flex items-center  md:flex-row-reverse items-center gap-7'>
+        <div key={item.id} className='flex items-center  md:flex-row-reverse items-center gap-7'>
             <div className='flex justify-center items-center text-3xl text-white bg-gradient-to-b from-orange-400 to-orange-500 w-12 h-12 p-4 rounded-full'>
                 <span>{item.icon}</span>
             </div>
@@ -25,7 +25,7 @@ const Values = () => {
   // for right values(we just wanted only two values to render in left side so we use "slice(0,2)" method "):
    const rightValues = value.slice(2).map(item=>{
     return(
-        <div className='flex items-center items-center gap-7 bg-red-300'>
+        <div key={item.id} className='flex items-center gap-7'>
             <div className='flex justify-center items-center text-3xl text-white bg-gradient-to-b from-orange-400 to-orange-500 w-12 h-12 p-4 rounded-full'>
                 <span>{item.icon}</span>
             </div>
